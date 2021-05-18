@@ -1,0 +1,902 @@
+﻿{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Todo",
+        "type": "regular",
+        "x": 478,
+        "y": 193,
+        "id": 1
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "SubTodo",
+        "isIdentifying": false,
+        "x": 478,
+        "y": 101,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "optional",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "optional",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          }
+        ],
+        "id": 2
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "User",
+        "type": "regular",
+        "x": 189,
+        "y": 186,
+        "id": 5
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "UserTodos",
+        "isIdentifying": false,
+        "x": 344,
+        "y": 189,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 5
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 1
+          }
+        ],
+        "id": 6
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "UserID",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 56,
+        "y": 106,
+        "id": 10
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "first_name",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 125,
+        "y": 57,
+        "id": 12
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "last_name",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 227,
+        "y": 37,
+        "id": 14
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "email",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 53,
+        "y": 169,
+        "id": 16
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "hashed_password",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 83,
+        "y": 238,
+        "id": 18
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Note",
+        "type": "regular",
+        "x": 162,
+        "y": 487,
+        "id": 20
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Notes",
+        "isIdentifying": false,
+        "x": 193,
+        "y": 376,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 5
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 20
+          }
+        ],
+        "id": 21
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Colaborations",
+        "isIdentifying": false,
+        "x": 135,
+        "y": 325,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 5
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 20
+          }
+        ],
+        "id": 24
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "NoteID",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 50,
+        "y": 487,
+        "id": 29
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Title",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 51,
+        "y": 558,
+        "id": 31
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Body",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 86,
+        "y": 616,
+        "id": 33
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "TodoRevision",
+        "type": "weak",
+        "x": 632,
+        "y": 423,
+        "id": 37
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "TodoID",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 609,
+        "y": 110,
+        "id": 38
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Title",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 630,
+        "y": 165,
+        "id": 40
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Body",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 629,
+        "y": 221,
+        "id": 42
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Revisions",
+        "isIdentifying": false,
+        "x": 545,
+        "y": 324,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 37
+          }
+        ],
+        "id": 44
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Comment",
+        "type": "regular",
+        "x": 368,
+        "y": 365,
+        "id": 47
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "TodoComments",
+        "isIdentifying": false,
+        "x": 426,
+        "y": 273,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 47
+          }
+        ],
+        "id": 48
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "TodoRevisionID",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 522,
+        "y": 474,
+        "id": 51
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Title",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 630,
+        "y": 539,
+        "id": 53
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Body",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 707,
+        "y": 499,
+        "id": 55
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "CommentID",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 302,
+        "y": 448,
+        "id": 57
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Body",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 359,
+        "y": 505,
+        "id": 59
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "UserComments",
+        "isIdentifying": false,
+        "x": 274,
+        "y": 281,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 5
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 47
+          }
+        ],
+        "id": 61
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Date",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 430,
+        "y": 442,
+        "id": 64
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Date",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 751,
+        "y": 435,
+        "id": 66
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Date",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 634,
+        "y": 278,
+        "id": 68
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Date",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 174,
+        "y": 651,
+        "id": 70
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "ConnectedAt",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": true,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 479,
+        "y": 36,
+        "id": 77
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Revision",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 525,
+        "y": 538,
+        "id": 103
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "fontSize",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": true,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 300,
+        "y": 86,
+        "id": 105
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 3
+      },
+      "source": 1,
+      "destination": 2
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 4
+      },
+      "source": 1,
+      "destination": 2
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 7
+      },
+      "source": 5,
+      "destination": 6
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 8
+      },
+      "source": 1,
+      "destination": 6
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 78
+      },
+      "source": 10,
+      "destination": 5
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 79
+      },
+      "source": 12,
+      "destination": 5
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 80
+      },
+      "source": 14,
+      "destination": 5
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 81
+      },
+      "source": 16,
+      "destination": 5
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 82
+      },
+      "source": 18,
+      "destination": 5
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 22
+      },
+      "source": 5,
+      "destination": 21
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 23
+      },
+      "source": 20,
+      "destination": 21
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 25
+      },
+      "source": 5,
+      "destination": 24
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 26
+      },
+      "source": 20,
+      "destination": 24
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 83
+      },
+      "source": 29,
+      "destination": 20
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 84
+      },
+      "source": 31,
+      "destination": 20
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 85
+      },
+      "source": 33,
+      "destination": 20
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 86
+      },
+      "source": 38,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 87
+      },
+      "source": 40,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 88
+      },
+      "source": 42,
+      "destination": 1
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 45
+      },
+      "source": 1,
+      "destination": 44
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 46
+      },
+      "source": 37,
+      "destination": 44
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 49
+      },
+      "source": 1,
+      "destination": 48
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 89
+      },
+      "source": 51,
+      "destination": 37
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 90
+      },
+      "source": 53,
+      "destination": 37
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 91
+      },
+      "source": 55,
+      "destination": 37
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 92
+      },
+      "source": 57,
+      "destination": 47
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 93
+      },
+      "source": 59,
+      "destination": 47
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 62
+      },
+      "source": 5,
+      "destination": 61
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 63
+      },
+      "source": 47,
+      "destination": 61
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 94
+      },
+      "source": 64,
+      "destination": 47
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 95
+      },
+      "source": 66,
+      "destination": 37
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 96
+      },
+      "source": 68,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 97
+      },
+      "source": 70,
+      "destination": 20
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 76
+      },
+      "source": 47,
+      "destination": 48
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 98
+      },
+      "source": 77,
+      "destination": 2
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 104
+      },
+      "source": 103,
+      "destination": 37
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 106
+      },
+      "source": 105,
+      "destination": 5
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}

@@ -1,0 +1,85 @@
+CREATE TABLE "User"
+(
+  UserID INT NOT NULL,
+  first_name VARCHAR(32) NOT NULL,
+  last_name VARCHAR(32) NOT NULL,
+  email VARCHAR(64) NOT NULL,
+  hashed_password CHAR(32) NOT NULL,
+  fontSize INT NOT NULL,
+  PRIMARY KEY (UserID),
+  UNIQUE (email),
+
+  -- additional check
+  CONSTRAINT chkFontSize CHECK (fontSize BETWEEN 12 AND 64)
+);
+
+CREATE TABLE "Note"
+(
+  NoteID INT NOT NULL,
+  Title VARCHAR(128) NOT NULL,
+  Body TEXT NOT NULL,
+  Date DATE NOT NULL,
+  UserID INT NOT NULL,
+  PRIMARY KEY (NoteID),
+  FOREIGN KEY (UserID) REFERENCES "User"(UserID)
+);
+
+CREATE TABLE "Colaborations"
+(
+  UserID INT NOT NULL,
+  NoteID INT NOT NULL,
+  PRIMARY KEY (UserID, NoteID),
+  FOREIGN KEY (UserID) REFERENCES "User"(UserID),
+  FOREIGN KEY (NoteID) REFERENCES "Note"(NoteID)
+);
+
+CREATE TABLE "Todo"
+(
+  TodoID INT NOT NULL,
+  Title VARCHAR(128) NOT NULL,
+  Body TEXT NOT NULL,
+  Date DATE NOT NULL,
+  UserID INT NOT NULL,
+  PRIMARY KEY (TodoID),
+  FOREIGN KEY (UserID) REFERENCES "User"(UserID)
+);
+
+CREATE TABLE "TodoRevision"
+(
+  TodoRevisionID INT NOT NULL,
+  Title VARCHAR(128) NOT NULL,
+  Body TEXT NOT NULL,
+  Date DATE NOT NULL,
+  Revision FLOAT NOT NULL,
+  TodoID INT NOT NULL,
+  PRIMARY KEY (TodoRevisionID),
+  FOREIGN KEY (TodoID) REFERENCES "Todo"(TodoID)
+);
+
+CREATE TABLE "Comment"
+(
+  CommentID INT NOT NULL,
+  Body TEXT NOT NULL,
+  Date DATE NOT NULL,
+  TodoID INT NOT NULL,
+  PRIMARY KEY (CommentID),
+  FOREIGN KEY (TodoID) REFERENCES "Todo"(TodoID)
+);
+
+CREATE TABLE "UserComments"
+(
+  UserID INT NOT NULL,
+  CommentID INT NOT NULL,
+  PRIMARY KEY (UserID, CommentID),
+  FOREIGN KEY (UserID) REFERENCES "User"(UserID),
+  FOREIGN KEY (CommentID) REFERENCES "Comment"(CommentID)
+);
+
+CREATE TABLE "SubTodo"
+(
+  TodoID_1 INT NOT NULL,
+  SubTodoTodoID_2 INT NOT NULL,
+  PRIMARY KEY (TodoID_1, SubTodoTodoID_2),
+  FOREIGN KEY (TodoID_1) REFERENCES "Todo"(TodoID),
+  FOREIGN KEY (SubTodoTodoID_2) REFERENCES "Todo"(TodoID)
+);

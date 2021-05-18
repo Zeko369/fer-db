@@ -1,0 +1,680 @@
+﻿{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Table",
+      "details": {
+        "name": "Todo",
+        "x": 325,
+        "y": 504,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "TodoID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 2
+          },
+          {
+            "names": [
+              "Title"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "128",
+            "id": 3
+          },
+          {
+            "names": [
+              "Body"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "custom",
+            "dataTypeSize": "TEXT",
+            "id": 4
+          },
+          {
+            "names": [
+              "Date"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "date",
+            "dataTypeSize": "",
+            "id": 5
+          },
+          {
+            "names": [
+              "UserID"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 26,
+            "references": [
+              {
+                "tableId": 6,
+                "attributeId": 7
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 1
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "User",
+        "x": 326,
+        "y": 360,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "UserID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 7
+          },
+          {
+            "names": [
+              "first_name"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "32",
+            "id": 8
+          },
+          {
+            "names": [
+              "last_name"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "32",
+            "id": 9
+          },
+          {
+            "names": [
+              "email"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": true,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "64",
+            "id": 10
+          },
+          {
+            "names": [
+              "hashed_password"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "charn",
+            "dataTypeSize": "32",
+            "id": 11
+          },
+          {
+            "names": [
+              "fontSize"
+            ],
+            "order": 1,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 12
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 6
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "Note",
+        "x": 56,
+        "y": 403,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "NoteID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 13
+          },
+          {
+            "names": [
+              "Title"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "128",
+            "id": 14
+          },
+          {
+            "names": [
+              "Body"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "custom",
+            "dataTypeSize": "TEXT",
+            "id": 15
+          },
+          {
+            "names": [
+              "Date"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "date",
+            "dataTypeSize": "",
+            "id": 16
+          },
+          {
+            "names": [
+              "UserID"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 28,
+            "references": [
+              {
+                "tableId": 6,
+                "attributeId": 7
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 12
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "TodoRevision",
+        "x": 60,
+        "y": 513,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "TodoRevisionID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 18
+          },
+          {
+            "names": [
+              "Title"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "varcharn",
+            "dataTypeSize": "128",
+            "id": 19
+          },
+          {
+            "names": [
+              "Body"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "custom",
+            "dataTypeSize": "TEXT",
+            "id": 20
+          },
+          {
+            "names": [
+              "Date"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "date",
+            "dataTypeSize": "",
+            "id": 21
+          },
+          {
+            "names": [
+              "TodoID"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 35,
+            "references": [
+              {
+                "tableId": 1,
+                "attributeId": 2
+              }
+            ]
+          },
+          {
+            "names": [
+              "Revision"
+            ],
+            "order": 1,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "float",
+            "dataTypeSize": "",
+            "id": 36
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 17
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "Comment",
+        "x": 538,
+        "y": 433,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "CommentID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 23
+          },
+          {
+            "names": [
+              "Body"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "custom",
+            "dataTypeSize": "TEXT",
+            "id": 24
+          },
+          {
+            "names": [
+              "Date"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": false,
+            "dataType": "date",
+            "dataTypeSize": "",
+            "id": 25
+          },
+          {
+            "names": [
+              "TodoID"
+            ],
+            "order": 0,
+            "pkMember": false,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 37,
+            "references": [
+              {
+                "tableId": 1,
+                "attributeId": 2
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 22
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "Colaborations",
+        "x": 59,
+        "y": 357,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "UserID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 31,
+            "references": [
+              {
+                "tableId": 6,
+                "attributeId": 7
+              }
+            ]
+          },
+          {
+            "names": [
+              "NoteID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 33,
+            "references": [
+              {
+                "tableId": 12,
+                "attributeId": 13
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 30
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "UserComments",
+        "x": 535,
+        "y": 360,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "UserID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 40,
+            "references": [
+              {
+                "tableId": 6,
+                "attributeId": 7
+              }
+            ]
+          },
+          {
+            "names": [
+              "CommentID"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 42,
+            "references": [
+              {
+                "tableId": 22,
+                "attributeId": 23
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 39
+      }
+    },
+    {
+      "type": "Table",
+      "details": {
+        "name": "SubTodo",
+        "x": 534,
+        "y": 528,
+        "sort": "automatic",
+        "attributes": [
+          {
+            "names": [
+              "TodoID_1"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 45,
+            "references": [
+              {
+                "tableId": 1,
+                "attributeId": 2
+              }
+            ]
+          },
+          {
+            "names": [
+              "SubTodoTodoID_2"
+            ],
+            "order": 0,
+            "pkMember": true,
+            "optional": false,
+            "soloUnique": false,
+            "fk": true,
+            "dataType": "int",
+            "dataTypeSize": null,
+            "id": 47,
+            "references": [
+              {
+                "tableId": 1,
+                "attributeId": 2
+              }
+            ]
+          }
+        ],
+        "uniqueGroups": [],
+        "id": 44
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 26,
+        "id": 27
+      },
+      "source": 6,
+      "destination": 1
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 28,
+        "id": 29
+      },
+      "source": 6,
+      "destination": 12
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 31,
+        "id": 32
+      },
+      "source": 6,
+      "destination": 30
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 33,
+        "id": 34
+      },
+      "source": 12,
+      "destination": 30
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 35,
+        "id": 36
+      },
+      "source": 1,
+      "destination": 17
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 37,
+        "id": 38
+      },
+      "source": 1,
+      "destination": 22
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 40,
+        "id": 41
+      },
+      "source": 6,
+      "destination": 39
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 42,
+        "id": 43
+      },
+      "source": 22,
+      "destination": 39
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 45,
+        "id": 46
+      },
+      "source": 1,
+      "destination": 44
+    },
+    {
+      "type": "TableConnector",
+      "details": {
+        "fkAttributeId": 47,
+        "id": 48
+      },
+      "source": 1,
+      "destination": 44
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}
