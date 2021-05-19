@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/fer_db_hw_3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="lab2" uuid="bdac7e4c-45df-42cf-9d4c-f70ed453c19b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/fer_db_lab_2</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
