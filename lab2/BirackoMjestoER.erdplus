@@ -1,0 +1,1036 @@
+﻿{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Jedinica",
+        "type": "regular",
+        "x": 182,
+        "y": 162,
+        "id": 1
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "VrstaJedinice",
+        "type": "regular",
+        "x": 482,
+        "y": 169,
+        "id": 8
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraVrstaJedinica",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 433,
+        "y": 49,
+        "id": 9
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Naziv",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 555,
+        "y": 59,
+        "id": 12
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "vrsta",
+        "isIdentifying": false,
+        "x": 338,
+        "y": 164,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 8
+          }
+        ],
+        "id": 14
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "SubJedinica",
+        "isIdentifying": false,
+        "x": 61,
+        "y": 151,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "optional",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          }
+        ],
+        "id": 17
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "BirackoMjesto",
+        "type": "regular",
+        "x": 162,
+        "y": 366,
+        "id": 22
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraBirackoMjesto",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 50,
+        "y": 309,
+        "id": 23
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Naziv",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 50,
+        "y": 388,
+        "id": 25
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "BirackaMjesta",
+        "isIdentifying": false,
+        "x": 171,
+        "y": 278,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 22
+          }
+        ],
+        "id": 27
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Mjesto",
+        "type": "regular",
+        "x": 534,
+        "y": 367,
+        "id": 30
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraMjesto",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 511,
+        "y": 254,
+        "id": 31
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "BM",
+        "isIdentifying": false,
+        "x": 322,
+        "y": 376,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 22
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 30
+          }
+        ],
+        "id": 33
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "PostanskiBroj",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 681,
+        "y": 310,
+        "id": 36
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Naziv",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 611,
+        "y": 267,
+        "id": 38
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "JedMj",
+        "isIdentifying": false,
+        "x": 350,
+        "y": 278,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 30
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          }
+        ],
+        "id": 40
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraJedinica",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 184,
+        "y": 53,
+        "id": 52
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Osoba",
+        "type": "regular",
+        "x": 723,
+        "y": 779,
+        "id": 55
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraOsoba",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 932,
+        "y": 726,
+        "id": 56
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Imenovanje",
+        "type": "regular",
+        "x": 429,
+        "y": 483,
+        "id": 60
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraImenovanje",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 414,
+        "y": 426,
+        "id": 61
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Datum",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 524,
+        "y": 436,
+        "id": 63
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Imenovanje",
+        "isIdentifying": false,
+        "x": 572,
+        "y": 618,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 55
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 60
+          }
+        ],
+        "id": 65
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Imenovanja",
+        "isIdentifying": false,
+        "x": 250,
+        "y": 499,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 22
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 60
+          }
+        ],
+        "id": 68
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Ime",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 934,
+        "y": 795,
+        "id": 71
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Prezime",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 910,
+        "y": 855,
+        "id": 73
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "OIB",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 820,
+        "y": 900,
+        "id": 75
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Prebivaliste",
+        "isIdentifying": false,
+        "x": 687,
+        "y": 467,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 30
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 55
+          }
+        ],
+        "id": 77
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Funkcija",
+        "type": "regular",
+        "x": 418,
+        "y": 632,
+        "id": 83
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "SifraFunckija",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 324,
+        "y": 707,
+        "id": 84
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "NazivFunkcija",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 463,
+        "y": 737,
+        "id": 86
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Func",
+        "isIdentifying": false,
+        "x": 400,
+        "y": 545,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 60
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 83
+          }
+        ],
+        "id": 88
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Termin",
+        "type": "weak",
+        "x": 121,
+        "y": 829,
+        "id": 91
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "VrijemePocetka",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 173,
+        "y": 908,
+        "id": 92
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "VrijemeZavrsetka",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": false,
+        "x": 63,
+        "y": 905,
+        "id": 94
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "TerminBirackoMjesto",
+        "isIdentifying": true,
+        "x": 100,
+        "y": 663,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "mandatory",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 22
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 91
+          }
+        ],
+        "id": 96
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "Dezurstvo",
+        "isIdentifying": false,
+        "x": 379,
+        "y": 830,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 91
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 55
+          }
+        ],
+        "id": 99
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "Naziv",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 300,
+        "y": 72,
+        "id": 105
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "Connector",
+      "details": {
+        "id": 145
+      },
+      "source": 9,
+      "destination": 8
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 146
+      },
+      "source": 12,
+      "destination": 8
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 15
+      },
+      "source": 1,
+      "destination": 14
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 16
+      },
+      "source": 8,
+      "destination": 14
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 18
+      },
+      "source": 1,
+      "destination": 17
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 19
+      },
+      "source": 1,
+      "destination": 17
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 147
+      },
+      "source": 23,
+      "destination": 22
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 148
+      },
+      "source": 25,
+      "destination": 22
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 28
+      },
+      "source": 1,
+      "destination": 27
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 29
+      },
+      "source": 22,
+      "destination": 27
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 149
+      },
+      "source": 31,
+      "destination": 30
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 34
+      },
+      "source": 22,
+      "destination": 33
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 35
+      },
+      "source": 30,
+      "destination": 33
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 150
+      },
+      "source": 36,
+      "destination": 30
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 151
+      },
+      "source": 38,
+      "destination": 30
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 50
+      },
+      "source": 30,
+      "destination": 40
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 51
+      },
+      "source": 1,
+      "destination": 40
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 152
+      },
+      "source": 52,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 153
+      },
+      "source": 56,
+      "destination": 55
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 154
+      },
+      "source": 61,
+      "destination": 60
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 155
+      },
+      "source": 63,
+      "destination": 60
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 66
+      },
+      "source": 55,
+      "destination": 65
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 67
+      },
+      "source": 60,
+      "destination": 65
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 69
+      },
+      "source": 22,
+      "destination": 68
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 70
+      },
+      "source": 60,
+      "destination": 68
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 156
+      },
+      "source": 71,
+      "destination": 55
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 157
+      },
+      "source": 73,
+      "destination": 55
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 158
+      },
+      "source": 75,
+      "destination": 55
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 78
+      },
+      "source": 30,
+      "destination": 77
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 79
+      },
+      "source": 55,
+      "destination": 77
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 159
+      },
+      "source": 84,
+      "destination": 83
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 160
+      },
+      "source": 86,
+      "destination": 83
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 89
+      },
+      "source": 60,
+      "destination": 88
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 90
+      },
+      "source": 83,
+      "destination": 88
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 161
+      },
+      "source": 92,
+      "destination": 91
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 162
+      },
+      "source": 94,
+      "destination": 91
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 97
+      },
+      "source": 22,
+      "destination": 96
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 98
+      },
+      "source": 91,
+      "destination": 96
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 100
+      },
+      "source": 91,
+      "destination": 99
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 101
+      },
+      "source": 55,
+      "destination": 99
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 163
+      },
+      "source": 105,
+      "destination": 1
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}
